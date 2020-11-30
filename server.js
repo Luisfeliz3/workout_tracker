@@ -9,12 +9,11 @@ const PORT = process.env.PORT || 3000;
 
 const databaseUrl = "workouts";
 const collections = ['workouts']
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", { 
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workouts", { 
   useNewUrlParser: true,
   useFindAndModify: false
 
 });
-
 
 app.use(logger("dev"));
 app.use(express.urlencoded({ extended: true }));
