@@ -2,7 +2,7 @@ const router = require('express').Router();
 const Workouts = require('../models/workouts.js');
 
 router.post("/api/workouts", (req, res) => {
-    Workout.find({})
+    Workouts.find({})
     .sort({ date: 1 })
     .then(dbWorkout => {
       res.send(dbWorkout);
